@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use App\Http\Controllers\Admin\CategoryController;
 
-
-Route::get('/', function () {
-    return 'admin.index';
-})->name('index');
+Route::resource('categories', CategoryController::class);
